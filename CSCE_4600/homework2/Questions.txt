@@ -1,0 +1,8 @@
+
+
+2. The program estblishes a shared memory space for the variable N, where stores the values obtained from file F, as well as a shared semaphore, which locks each child process while it's reading from file F, incrementing the obtained value, and writing the new value back to file F. 
+
+Once the one incrementing iteration is complete, the semaphore is released, and the next process in queue enteres to perform the same task, locking the semaphore behind it. This repeats until variable N reaches 500, from 1;
+
+As seen from the output, the processess are perfectly syncronized: 1, 2, 3, 1, 2, 3, ...
+
